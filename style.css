@@ -76,7 +76,7 @@ input {
     display: flex;
     gap: 2rem;
     height: 100%;
-    
+
 }
 
 .sidebar {
@@ -290,6 +290,21 @@ aside {
     position: relative;
 }
 
+.icon i::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 5rem;
+    border: 0.1rem solid #dbd8d8;
+    margin-top: 0.5rem;
+}
+
+.step-div:last-child .icon i::after {
+    visibility: hidden;
+
+}
+
 .icon i.active {
     font-size: 2.4rem;
     padding: 0.8rem 1.1rem;
@@ -315,7 +330,7 @@ aside {
     gap: 2rem;
 }
 
-.icon:hover:before {
+.icon:hover::before {
     content: "✔";
     position: absolute;
     width: 40px;
@@ -323,13 +338,13 @@ aside {
     cursor: pointer;
     background: var(--primary-color);
     text-align: center;
-    color: #fff;
+    color: var(--base-color);
     font-size: 29px;
     border-radius: 50%;
     z-index: 1;
 }
 
-.icon i.complete:before {
+.icon i.complete::before {
     content: "✔";
     position: absolute;
     width: 40px;
@@ -337,7 +352,7 @@ aside {
     cursor: pointer;
     background: var(--primary-color);
     text-align: center;
-    color: #fff;
+    color: var(--base-color);
     font-size: 29px;
     border-radius: 50%;
     z-index: 1;
@@ -356,6 +371,7 @@ aside {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    text-align: center;
 
 }
 
@@ -425,6 +441,7 @@ aside {
     align-items: center;
     gap: 2rem;
     padding: 4rem;
+    
 }
 
 .drag-area label {
@@ -434,4 +451,26 @@ aside {
 .drag-area i {
     font-size: 6rem;
     color: var(--primary-color);
+}
+
+/* Responsive code for mobile device */
+
+@media only screen and (max-width: 768px) {
+    .inner-container {
+        flex-direction: column;
+
+    }
+
+    input#listname, select#listowner, select#sourcename{
+        width: 80vw;
+    }
+    .upload-file-col{
+        grid-column: 1 / -1;
+    }
+    .instructions-col{
+        grid-column: 1 / -1;
+    }
+    .sidebar{
+        min-height: 80vh;
+    }
 }
