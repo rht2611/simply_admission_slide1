@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Admission</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h5 class="main-title">Upload Raw Data</h5>
+        <div class="inner-container">
+            <div class="sidebar">
+                <aside>
+                    <div class="step step-div">
+                        <div class="icon">
+                            <i class="fa-regular fa-file-lines active"></i>
+
+                        </div>
+                        <div class="vline"></div>
+                        <div>
+                            <p><span class="small-text">STEP 1</span><br>Raw Data Details</p>
+                        </div>
+                    </div>
+                    <div class="step step-div">
+                        <div class="icon">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+
+                        <div>
+                            <p><span class="small-text">STEP 2</span><br>Upload Excel File</p>
+                        </div>
+                    </div>
+
+                    <div class="step step-div">
+                        <div class="icon">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="vline2"></div>
+                        <div>
+                            <p><span class="small-text">STEP 3</span><br>Label Mapping</p>
+                        </div>
+                    </div>
+                    <div class="step step-div">
+                        <div class="icon">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="vline3"></div>
+                        <div>
+                            <p><span class="small-text">STEP 4</span><br>Validation & Finish</p>
+                        </div>
+                    </div>
+
+
+                </aside>
+            </div>
+
+            <div class="main">
+                <div class="steps">
+                    <h4>Step 1. Raw Data Details</h4>
+                    <p class="bolded-text">Fill the detail given to proceed further</p>
+                </div>
+                <div class="form-section">
+
+                    <form class="data-details-form">
+                        <div class="field list-name">
+                            <label for="listname">List Name</label>
+                            <input type="text" id="listname" name="listname" placeholder="Name">
+                        </div>
+                        <div class="field list-owner">
+                            <label for="listowner">List Owner</label>
+                            <select id="listowner" name="listowner">
+                                <option value="">Select List Owner</option>
+                                <option value="Owner 1">Owner 1</option>
+                                <option value="Owner 2">Owner 2</option>
+                                <option value="Owner 3">Owner 3</option>
+                                <option value="Owner 4">Owner 4</option>
+                            </select>
+                        </div>
+                        <div class="field source-name">
+                            <label for="sourcename">Source Name</label>
+                            <select id="sourcename" name="sourcename">
+                                <option value="">Select Source Name</option>
+                                <option value="Source 1">Source 1</option>
+                                <option value="Source 2">Source 2</option>
+                                <option value="Source 3">Source 3</option>
+                                <option value="Source 4">Source 4</option>
+                            </select>
+                        </div>
+                        <div class="field description">
+                            <p><label for="description">Description</label></p>
+                            <textarea name="description" rows="5" placeholder="Enter Description"></textarea>
+                        </div>
+                        <div class="field buttons">
+                            <div><button class="reset-button" type="reset" value="Reset">Reset</button></div>
+                            <div><button class="save-button" type="submit" value="Submit">Save & Next</button></div>
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
